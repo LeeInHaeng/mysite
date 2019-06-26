@@ -44,5 +44,10 @@ public class GuestbookController {
 		guestbookService.writeContent( vo );
 		return "redirect:/guestbook";
 	}
+	
 
+	@RequestMapping(value="/ajax", method=RequestMethod.GET)
+	public String indexAjax() {
+		return "guestbook/list-ajax";
+	}
 }
